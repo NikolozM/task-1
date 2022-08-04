@@ -1,10 +1,14 @@
-import React from 'react'
-import MainContent from '../components/MainContent'
+import React from 'react';
+import MainContent from '../components/MainContent';
+import Accordion from '../components/Accordion';
 
-const home = () => {
+const home = ({ content }) => {
   return (
-    <div><MainContent/></div>
-  )
-}
+    <div>
+      <MainContent content={content} />
+      <Accordion />
+    </div>
+  );
+};
 
-export default home
+export default home;
