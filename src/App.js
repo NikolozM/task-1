@@ -9,7 +9,7 @@ import Topbar from "./components/Topbar";
 
 const App = () => {
   return (
-    <Box width='400px' sx={{width: {xl: '1488'}}} m="auto">
+    <Box  m="auto">
       <Topbar />
       {/* <Routes>
         <Route path='/' element={<Home />} />
