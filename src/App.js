@@ -6,11 +6,13 @@ import { Box } from "@mui/material";
 // import Home from "./pages/Home";
 // import Footer from "./components/Footer";
 import Topbar from "./components/Topbar";
+import Home from "./pages/Home";
 
 const App = () => {
   return (
-    <Box  m="auto">
+    <Box>
       <Topbar />
+      <Home />
       {/* <Routes>
         <Route path='/' element={<Home />} />
         <Route

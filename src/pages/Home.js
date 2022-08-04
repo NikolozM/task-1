@@ -1,8 +1,9 @@
 import React from 'react'
+import MainContent from '../components/MainContent'
 
 const home = () => {
   return (
-    <div>home</div>
+    <div><MainContent/></div>
   )
 }
 

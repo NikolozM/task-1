@@ -9,33 +9,42 @@ import {
 
 import MenuIcon from "@mui/icons-material/Menu";
 
+
 const Navbar = () => {
   const [search, setSearch] = useState("");
 
   const [hamburgerOn, setHamburgerOn] = useState(false);
 
-  function menusIcon() {
+  function hamburgerIcon() {
     setHamburgerOn(!hamburgerOn);
   }
 
+  const titles = ['კომპანიის კულტურა','კომპანიის შესახებ' ,'ზოგადი ინფორმაცია','თანამშრომელთა გუნდი','მომსახურება']
+
   return (
+    <div>
     <Stack
       direction='row'
       alignItems='center'
       justifyContent='space-between'
       px='20px'
     >
-      <Stack direction='row' gap='20px' alignItems='center'>
+
+      <Stack
+        direction='row'
+        gap='20px'
+        alignItems='center'
+      >
         <MenuIcon
-          onClick={() => menusIcon()}
+          onClick={() => hamburgerIcon()}
           fontSize='large'
           style={{ cursor: "pointer" }}
         />
 
         <Typography
-          fontWeight={700}
+          fontWeight={600}
           textAlign='center'
-          fontSize='12px'
+          fontSize='14px'
         >
           <Link
             to='/'
@@ -47,19 +56,22 @@ const Navbar = () => {
             მთავარი
           </Link>
         </Typography>
-      </Stack>
-      <Stack
+
+
+        <Stack 
+        style={{
+        display: hamburgerOn === true ? "flex" : "none",
+        }}
         direction='row'
         gap='20px'
-        style={{
-          display: hamburgerOn === true ? "flex" : "none",
-        }}
         alignItems='center'
-      >
-        <Typography
+        className='roll-out'>
+        {titles.map((text)=> {
+          return(
+            <Typography
           fontWeight={700}
           textAlign='center'
-          fontSize='12px'
+          fontSize='14px'
         >
           <Link
             to='/'
@@ -68,69 +80,12 @@ const Navbar = () => {
               color: "#3A1212",
             }}
           >
-            კომპანიის კულტურა
+            {text}
           </Link>
         </Typography>
-        <Typography
-          fontWeight={700}
-          textAlign='center'
-          fontSize='12px'
-        >
-          <Link
-            to='/'
-            style={{
-              textDecoration: "none",
-              color: "#3A1212",
-            }}
-          >
-            კომპანიის შესახებ
-          </Link>
-        </Typography>
-        <Typography
-          fontWeight={700}
-          textAlign='center'
-          fontSize='12px'
-        >
-          <Link
-            to='/'
-            style={{
-              textDecoration: "none",
-              color: "#3A1212",
-            }}
-          >
-            ზოგადი ინფორმაცია
-          </Link>
-        </Typography>
-        <Typography
-          fontWeight={700}
-          textAlign='center'
-          fontSize='12px'
-        >
-          <Link
-            to='/'
-            style={{
-              textDecoration: "none",
-              color: "#3A1212",
-            }}
-          >
-            თანამშრომელთა გუნდი
-          </Link>
-        </Typography>
-        <Typography
-          fontWeight={700}
-          textAlign='center'
-          fontSize='12px'
-        >
-          <Link
-            to='/'
-            style={{
-              textDecoration: "none",
-              color: "#3A1212",
-            }}
-          >
-            მომსახურება
-          </Link>
-        </Typography>
+          )
+        })}
+        </Stack>
       </Stack>
 
       <TextField
@@ -170,7 +125,21 @@ const Navbar = () => {
           ></img>
         </Link>
       </Box>
+
     </Stack>
+    <div className="container">
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+        </div>
+
+        </div>
+
   );
 };
 
