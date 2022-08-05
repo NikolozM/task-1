@@ -1,12 +1,18 @@
 import React from 'react';
-import MainContent from '../components/MainContent';
-import Accordion from '../components/Accordion';
+import MainContent from '../components/Main/MainContent';
+import Birthdays from '../components/Main/Birthdays';
+import Media from '../components/Main/Media';
+import News from '../components/Main/News';
+import UsefulInfo from '../components/Main/UsefulInfo';
 
 const home = ({ content }) => {
   return (
     <div>
       <MainContent content={content} />
-      <Accordion />
+      <Birthdays />
+      <Media />
+      <News />
+      <UsefulInfo />
     </div>
   );
 };

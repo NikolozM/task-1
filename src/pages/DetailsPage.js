@@ -9,7 +9,7 @@ const DetailsPage = ({ content }) => {
 
   console.log(arr);
 
-  return <div>{arr[0].text}</div>;
+  return <div>aaa</div>;
 };
 
 export default DetailsPage;

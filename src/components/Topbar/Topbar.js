@@ -6,37 +6,18 @@ import {
   TextField,
   Box,
 } from '@mui/material';
-// import Accordion from './Accordion';
-
+import TopbarContent from './TopbarContent';
 import MenuIcon from '@mui/icons-material/Menu';
 import ClearIcon from '@mui/icons-material/Clear';
-import titles from '../topBarContent.json';
+import Logo from '../../assets/Logo.png';
 
 const Navbar = () => {
   const [search, setSearch] = useState('');
   const [hamburgerOn, setHamburgerOn] = useState(false);
-  const [dropMenu, setDropMenu] = useState();
 
   function hamburgerIcon() {
     setHamburgerOn(!hamburgerOn);
   }
-
-  const [isHovering, setIsHovering] = useState(false);
-
-  const handleMouseOver = () => {
-    setIsHovering(true);
-  };
-
-  const handleMouseOut = () => {
-    setIsHovering(false);
-  };
-
-  const dropDown = (id) => {
-    setDropMenu(
-      titles.filter((item) => item.id.includes(id))
-    );
-    console.log(dropMenu);
-  };
 
   return (
     <div>
@@ -91,31 +72,7 @@ const Navbar = () => {
             alignItems='center'
             className='roll-out'
           >
-            {titles.map((text) => {
-              return (
-                <Typography
-                  fontWeight={700}
-                  textAlign='center'
-                  fontSize='14px'
-                  onMouseOver={() => {
-                    dropDown(text.id);
-                    handleMouseOver();
-                  }}
-                  onMouseOut={handleMouseOut}
-                >
-                  <Link
-                    to='/'
-                    style={{
-                      textDecoration: 'none',
-                      color: '#3A1212',
-                    }}
-                  >
-                    {text.id}
-                  </Link>
-                </Typography>
-              );
-            })}
-            {/* <Accordion/> */}
+            <TopbarContent />
           </Stack>
         </Stack>
 
@@ -149,7 +106,7 @@ const Navbar = () => {
           }}
         >
           <img
-            src='http://www.procreditbank.ge/sites/default/files/main-logo.png'
+            src={Logo}
             alt='logo'
             style={{ width: '100%' }}
           ></img>
