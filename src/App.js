@@ -5,7 +5,6 @@ import { Box } from '@mui/material';
 import Topbar from './components/Topbar/Topbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import content from './records.json';
 import { topBarRoute } from './routes/topBarRoute.js';
 
 const App = () => {
@@ -15,7 +14,7 @@ const App = () => {
       <Routes>
         <Route
           path='/'
-          element={<Home content={content} />}
+          element={<Home />}
         />
         {topBarRoute.map((route) => {
           const result = [];
