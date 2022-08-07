@@ -1,52 +1,75 @@
-import React from 'react';
-import { Typography, TextField, Box } from '@mui/material';
-import Divider from '@mui/material/Divider';
-import Paper from '@mui/material/Paper';
-import Stack from '@mui/material/Stack';
-import { styled } from '@mui/material/styles';
-import FacebookIcon from '@mui/icons-material/Facebook';
+import React from "react";
+import {
+  Typography,
+  TextField,
+  Box,
+  Container,
+  Grid,
+} from "@mui/material";
+import Link from "@mui/material/Link";
 
 const Footer = () => {
   return (
-    <div
-      style={{
-        width: '100%',
-        height: '107px',
-        background: '#1a1a1a',
-        margin:0,
-        padding:0
-      }}
+    <Box
+      px={{ xs: 3, sm: 10 }}
+      py={{ xs: 5, sm: 10 }}
+      bgcolor='text.secondary'
+      color='white'
     >
-      <Stack
-        direction='row'
-        justifyContent='space-evenly'
-        mt='20px'
-      >
-        <p style={{ color: 'rgba(255,255,255,0.3)' }}>
-          ©2022 ProCredit Bank, Georgia
-        </p>
-        <Stack
-          direction='row'
-          divider={
-            <Divider
-              orientation='vertical'
-              flexItem
-              color='rgba(255,255,255,0.3)'
-              width='2px'
-            />
-          }
-          spacing={2}
-        >
-          <Typography
-            color='rgba(255,255,255,0.3)'
-            fontSize='24px'
-          >
-            შემოგვიერთდით
-          </Typography>
-          <FacebookIcon color='blue' fontSize='large' />
-        </Stack>
-      </Stack>
-    </div>
+      <Container maxWidth='lg'>
+        <Grid container spacing={5}>
+          <Grid item xs={12} sm={4}>
+            <Box borderBottom={1}>Help</Box>
+            <Box>
+              <Link href='/' color='inherit'>
+                Contact
+              </Link>
+            </Box>
+            <Box>
+              <Link href='/' color='inherit'>
+                Support
+              </Link>
+            </Box>
+            <Box>
+              <Link href='/' color='inherit'>
+                Privacy Policy
+              </Link>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box borderBottom={1}>Account</Box>
+            <Box>
+              <Link href='/' color='inherit'>
+                Login
+              </Link>
+            </Box>
+            <Box>
+              <Link href='/' color='inherit'>
+                Register
+              </Link>
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Box borderBottom={1}>Messages</Box>
+            <Box>
+              <Link href='/' color='inherit'>
+                Backup
+              </Link>
+            </Box>
+            <Box>
+              <Link href='/' color='inherit'>
+                History
+              </Link>
+            </Box>
+            <Box>
+              <Link href='/' color='inherit'>
+                Roll
+              </Link>
+            </Box>
+          </Grid>
+        </Grid>
+      </Container>
+    </Box>
   );
 };
 

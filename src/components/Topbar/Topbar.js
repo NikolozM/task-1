@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Stack,
   Typography,
   TextField,
   Box,
-} from '@mui/material';
-import TopbarContent from './TopbarContent';
-import MenuIcon from '@mui/icons-material/Menu';
-import ClearIcon from '@mui/icons-material/Clear';
-import Logo from '../../assets/Logo.png';
+} from "@mui/material";
+import TopbarContent from "./TopbarContent";
+import MenuIcon from "@mui/icons-material/Menu";
+import ClearIcon from "@mui/icons-material/Clear";
+import Logo from "../../assets/Logo.png";
 
 const Navbar = () => {
-  const [search, setSearch] = useState('');
+  const [search, setSearch] = useState("");
   const [hamburgerOn, setHamburgerOn] = useState(false);
 
   function hamburgerIcon() {
@@ -25,7 +25,7 @@ const Navbar = () => {
         direction='row'
         alignItems='center'
         justifyContent='space-between'
-        px='20px'
+        p='15px'
       >
         <Stack
           direction='row'
@@ -36,13 +36,13 @@ const Navbar = () => {
             <ClearIcon
               onClick={() => hamburgerIcon()}
               fontSize='large'
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
             />
           ) : (
             <MenuIcon
               onClick={() => hamburgerIcon()}
               fontSize='large'
-              style={{ cursor: 'pointer' }}
+              style={{ cursor: "pointer" }}
             />
           )}
 
@@ -54,8 +54,8 @@ const Navbar = () => {
             <Link
               to='/'
               style={{
-                textDecoration: 'none',
-                color: '#3A1212',
+                textDecoration: "none",
+                color: "#3A1212",
               }}
             >
               მთავარი
@@ -63,11 +63,10 @@ const Navbar = () => {
           </Typography>
 
           <Stack
-            style={{
+            sx={{
               display:
-                hamburgerOn === true ? 'flex' : 'none',
+                hamburgerOn === true ? "flex" : "none",
             }}
-            direction='row'
             gap='20px'
             alignItems='center'
             className='roll-out'
@@ -76,41 +75,44 @@ const Navbar = () => {
           </Stack>
         </Stack>
 
-        <TextField
-          sx={{
-            input: {
-              fontSize: '10px',
-              fontWeight: '300',
-              border: 'none',
-              borderRadius: '0px',
-            },
-            width: { lg: '350px', xs: '250px' },
-            backgroundColor: '#fff',
-            borderRadius: '40px',
-          }}
-          size='small'
-          value={search}
-          onChange={(e) =>
-            setSearch(e.target.value.toLowerCase())
-          }
-          placeholder='ძებნა'
-          type='text'
-        />
+        <Stack direction='row'>
+          <TextField
+            sx={{
+              input: {
+                fontSize: "10px",
+                fontWeight: "300",
+                border: "none",
+                borderRadius: "0px",
+              },
+              width: { lg: "250px", xs: "150px" },
+              backgroundColor: "#fff",
+              borderRadius: "40px",
+              paddingRight: "20px",
+            }}
+            size='small'
+            value={search}
+            onChange={(e) =>
+              setSearch(e.target.value.toLowerCase())
+            }
+            placeholder='ძებნა'
+            type='text'
+          />
 
-        <Box
-          width={{
-            xl: '250px',
-            md: '150px',
-            sm: '130px',
-            xs: '100px',
-          }}
-        >
-          <img
-            src={Logo}
-            alt='logo'
-            style={{ width: '100%' }}
-          ></img>
-        </Box>
+          <Box
+            width={{
+              xl: "250px",
+              md: "150px",
+              sm: "130px",
+              xs: "100px",
+            }}
+          >
+            <img
+              src={Logo}
+              alt='logo'
+              style={{ width: "100%" }}
+            ></img>
+          </Box>
+        </Stack>
       </Stack>
       <div className='container'>
         <ul>

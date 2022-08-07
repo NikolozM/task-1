@@ -4,7 +4,7 @@ import Birthdays from '../components/Main/Birthdays';
 import Media from '../components/Main/Media';
 import News from '../components/Main/News';
 import UsefulInfo from '../components/Main/UsefulInfo';
-import content from '../records.json';
+import content from '../mainContentRecords.json';
 
 const home = () => {
   return (
