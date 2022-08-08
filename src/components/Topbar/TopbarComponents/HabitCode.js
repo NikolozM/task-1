@@ -1,10 +1,5 @@
 import React from 'react';
-import {
-  Stack,
-  Typography,
-  TextField,
-  Box,
-} from '@mui/material';
+import { Typography } from '@mui/material';
 const HabitCode = () => {
   return (
     <div>

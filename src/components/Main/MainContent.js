@@ -1,12 +1,9 @@
-import React from "react";
+import React from 'react';
 import {
-  Stack,
   Typography,
-  TextField,
-  Box,
   Grid,
-} from "@mui/material";
-import { Link } from "react-router-dom";
+} from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const MainContent = ({ content }) => {
   return (
@@ -20,22 +17,27 @@ const MainContent = ({ content }) => {
         return (
           <Grid
             item
-            xs={4}
-            m='50px'
+            xs={{ xl: '4', md: '6', sm: '8', xs: '12' }}
+            m={{
+              xl: '10px 30px 80px 30px',
+              md: '10px 0px 80px 0px',
+              sm: '10px 0px 50px 0px',
+              xs: '10px 0px 30px 0px',
+            }}
             sx={{
-              "&:hover": {
-                boxShadow: "1px 1px 1px rgb(212, 241, 215)",
-                transform: "scale(1.02)",
-                borderRadius: "10px",
-                transition: "0.5s",
+              '&:hover': {
+                boxShadow: '1px 1px 1px rgb(212, 241, 215)',
+                transform: 'scale(1.02)',
+                borderRadius: '10px',
+                transition: '0.5s',
               },
             }}
           >
             <Link
               to={item.path}
               style={{
-                textDecoration: "none",
-                color: "#3A1212",
+                textDecoration: 'none',
+                color: '#3A1212',
               }}
             >
               <Typography align='center'>
@@ -43,9 +45,9 @@ const MainContent = ({ content }) => {
               </Typography>
               <img
                 style={{
-                  width: "100%",
-                  height: "100%",
-                  objectFit: "contain",
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
                 }}
                 src={item.img}
                 alt=''

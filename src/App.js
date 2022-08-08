@@ -1,17 +1,17 @@
-import React from "react";
-import "./App.css";
-import { Route, Routes } from "react-router-dom";
-import { Box } from "@mui/material";
-import Topbar from "./components/Topbar/Topbar";
-import Footer from "./components/Footer";
-import MainPage from "./pages/MainPage";
-import { topBarRoute } from "./routes/topBarRoute.js";
-import EmployeesContactPage from "./pages/EmployeesContactPage";
-import EmployeesPage from "./pages/EmployeesPage";
-import MyPage from "./pages/MyPage";
-import MarketingPage from "./pages/MarketingPage";
-import TrainingsAndDevelopmentPage from "./pages/TrainingsAndDevelopmentPage";
-import EnvironmentalManagementPage from "./pages/EnvironmentalManagementPage";
+import React from 'react';
+import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import { Box } from '@mui/material';
+import Topbar from './components/Topbar/Topbar';
+import Footer from './components/Footer';
+import MainPage from './pages/MainPage';
+import { topBarRoute } from './routes/topBarRoute.js';
+import EmployeesContactPage from './pages/EmployeesContactPage';
+import EmployeesPage from './pages/EmployeesPage';
+import MyPage from './pages/MyPage';
+import MarketingPage from './pages/MarketingPage';
+import TrainingsAndDevelopmentPage from './pages/TrainingsAndDevelopmentPage';
+import EnvironmentalManagementPage from './pages/EnvironmentalManagementPage';
 
 const App = () => {
   return (
@@ -63,7 +63,7 @@ const App = () => {
           element={<EnvironmentalManagementPage />}
         />
       </Routes>
-      <div style={{ marginTop: "auto" }}>
+      <div style={{ marginTop: 'auto' }}>
         <Footer />
       </div>
     </Box>
