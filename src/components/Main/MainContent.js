@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  Typography,
-  Grid,
-} from '@mui/material';
+import { Typography, Grid } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 const MainContent = ({ content }) => {
@@ -17,10 +14,13 @@ const MainContent = ({ content }) => {
         return (
           <Grid
             item
-            xs={{ xl: '4', md: '6', sm: '8', xs: '12' }}
+            xl={4}
+            md={6}
+            sm={8}
+            xs={12}
             m={{
               xl: '10px 30px 80px 30px',
-              md: '10px 0px 80px 0px',
+              md: '10px 30px 80px 30px',
               sm: '10px 0px 50px 0px',
               xs: '10px 0px 30px 0px',
             }}
