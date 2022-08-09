@@ -12,6 +12,8 @@ import MyPage from './pages/MyPage';
 import MarketingPage from './pages/MarketingPage';
 import TrainingsAndDevelopmentPage from './pages/TrainingsAndDevelopmentPage';
 import EnvironmentalManagementPage from './pages/EnvironmentalManagementPage';
+import Chart from './components/Chart'
+
 
 const App = () => {
   return (
@@ -66,6 +68,8 @@ const App = () => {
       <div style={{ marginTop: 'auto' }}>
         <Footer />
       </div>
+
+      <Chart/>
     </Box>
   );
 };

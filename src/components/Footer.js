@@ -15,7 +15,7 @@ const Footer = () => {
       bgcolor='#333333'
     >
       <Container maxWidth='lg'>
-        <Grid container spacing={30}>
+        <Grid container spacing={{ xs: 10, sm: 30 }}>
           <Grid item xs={12} sm={4}>
             <Box mb='30px' color='#fff' fontSize='18px'>
               დამატებითი ბმულები

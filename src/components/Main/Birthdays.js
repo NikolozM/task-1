@@ -11,138 +11,62 @@ import {
   Box,
   Container,
 } from '@mui/material';
+import { birthdays } from '../../routes/birthdays.js';
 
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
+
+let newDate = new Date();
+let date = newDate.getDate();
+let month = newDate.getMonth() + 1;
+let year = newDate.getFullYear();
+let separator = '/';
+
+let currentDate = `${
+  month < 10 ? `0${month}` : `${month}`
+}${separator}${
+  month < 10 ? `0${date}` : `${date}`
+}${separator}${year}`;
+
+console.log(currentDate);
 
 const Birthdays = () => {
   return (
     <ScrollMenu>
       <Stack direction='row'>
-        <Card sx={{ width: 245, padding: '50px' }}>
-          <CardActionArea>
-            <CardMedia
-              component='img'
-              height='140'
-              image={dog}
-              alt='green iguana'
-            />
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant='h5'
-                component='div'
+        {birthdays.map((person) => {
+          if (person.birthday === currentDate) {
+            return (
+              <Card
+                sx={{ width: 245, padding: '50px' }}
+                key={person.id}
               >
-                ცუგა
-              </Typography>
-              <Typography
-                variant='body2'
-                color='text.secondary'
-              >
-                კომპანია ცუგას ულოცავს დაბადების დღეს
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ width: 245, padding: '50px' }}>
-          <CardActionArea>
-            <CardMedia
-              component='img'
-              height='140'
-              image={dog}
-              alt='green iguana'
-            />
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant='h5'
-                component='div'
-              >
-                ცუგა
-              </Typography>
-              <Typography
-                variant='body2'
-                color='text.secondary'
-              >
-                კომპანია ცუგას ულოცავს დაბადების დღეს
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ width: 245, padding: '50px' }}>
-          <CardActionArea>
-            <CardMedia
-              component='img'
-              height='140'
-              image={dog}
-              alt='green iguana'
-            />
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant='h5'
-                component='div'
-              >
-                ცუგა
-              </Typography>
-              <Typography
-                variant='body2'
-                color='text.secondary'
-              >
-                კომპანია ცუგას ულოცავს დაბადების დღეს
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ width: 245, padding: '50px' }}>
-          <CardActionArea>
-            <CardMedia
-              component='img'
-              height='140'
-              image={dog}
-              alt='green iguana'
-            />
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant='h5'
-                component='div'
-              >
-                ცუგა
-              </Typography>
-              <Typography
-                variant='body2'
-                color='text.secondary'
-              >
-                კომპანია ცუგას ულოცავს დაბადების დღეს
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
-        <Card sx={{ width: 245, padding: '50px' }}>
-          <CardActionArea>
-            <CardMedia
-              component='img'
-              height='140'
-              image={dog}
-              alt='green iguana'
-            />
-            <CardContent>
-              <Typography
-                gutterBottom
-                variant='h5'
-                component='div'
-              >
-                ცუგა
-              </Typography>
-              <Typography
-                variant='body2'
-                color='text.secondary'
-              >
-                კომპანია ცუგას ულოცავს დაბადების დღეს
-              </Typography>
-            </CardContent>
-          </CardActionArea>
-        </Card>
+                <CardActionArea>
+                  <CardMedia
+                    component='img'
+                    height='140'
+                    image={person.img}
+                    alt='green iguana'
+                  />
+                  <CardContent>
+                    <Typography
+                      gutterBottom
+                      variant='h5'
+                      component='div'
+                    >
+                      {person.name}
+                    </Typography>
+                    <Typography
+                      variant='body2'
+                      color='text.secondary'
+                    >
+                      {person.text}
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            );
+          }
+        })}
       </Stack>
     </ScrollMenu>
   );
