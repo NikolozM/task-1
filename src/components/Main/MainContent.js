@@ -13,7 +13,7 @@ const MainContent = ({ content }) => {
       {content.map((item) => {
         return (
           <Grid
-          key={item.id}
+            key={item.id}
             item
             xl={4}
             md={6}

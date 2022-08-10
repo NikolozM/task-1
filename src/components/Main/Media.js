@@ -1,26 +1,26 @@
-import React from 'react'
-import CardMedia from "@mui/material/CardMedia";
-import dog from "../../assets/dog.png";
+import React from 'react';
+import CardMedia from '@mui/material/CardMedia';
+import dog from '../../assets/dog.png';
 import {
   Stack,
   Typography,
   TextField,
   Box,
-} from "@mui/material";
+} from '@mui/material';
 
 const Media = () => {
   return (
     <div>
       <Box>
-      {/* <CardMedia
+        {/* <CardMedia
               component='img'
               height='140'
               image={dog}
               alt='green iguana'
             /> */}
       </Box>
-      </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Media
+export default Media;

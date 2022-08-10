@@ -7,10 +7,7 @@ import {
 } from '@mui/material';
 
 const News = () => {
-  return (
-    <div>
-    </div>
-  );
+  return <div></div>;
 };
 
 export default News;

@@ -1,0 +1,27 @@
+{
+  "main": "მთავარი",
+  "our_company": "ჩვენი კომპანია",
+  "our_management": "ჩვენი მენეჯმენტი",
+  "company_culture": "კომპანიის კულტურა",
+  "our_values": "ჩვენი ღირებულებები",
+  "our_habit_code": "ჩვენი ქცევის კოდექსი",
+  "our_dress_code": "ჩვენი ჩაცმის კოდექსი",
+  "general_info": "ზოგადი ინფორმაცია",
+  "health_insurance": "ჯანმრთელობის დაზღვევის პირობები",
+  "vacancy_politic": "შვებულების პოლიტიკა",
+  "vacancy_payment": "დეკრეტული შვებულების ანაზღაურება",
+  "our_team": "ჩვენი გუნდი",
+  "changing_position": "პოზიციის ცვლილება და შერჩევა",
+  "professional_development": "პროფესიული განვითარება",
+  "procredit_academy": "პროკრედიტ აკადემია",
+  "our_service": "ჩვენი მომსახურება",
+  "car_reservation": "ავტომობილის დარეზერვება",
+
+
+  "employees_page":"თანამშრომელთა გვერდი",
+  "my_page": "ჩემი გვერდი",
+  "marketing":"მარკეტინგი",
+  "environmental_management":"გარემოსდაცვითი მენეჯმენტი",
+  "trainings_and_development":"ტრენინგები და განვითარება",
+  "employees_contact":"თანამშრომელთა კონტაქტები"
+}

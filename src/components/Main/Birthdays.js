@@ -4,15 +4,8 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
-import dog from '../../assets/dog.png';
-import {
-  Stack,
-  TextField,
-  Box,
-  Container,
-} from '@mui/material';
+import { Stack } from '@mui/material';
 import { birthdays } from '../../routes/birthdays.js';
-
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 
 let newDate = new Date();
@@ -26,8 +19,6 @@ let currentDate = `${
 }${separator}${
   month < 10 ? `0${date}` : `${date}`
 }${separator}${year}`;
-
-console.log(currentDate);
 
 const Birthdays = () => {
   return (
