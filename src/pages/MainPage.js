@@ -43,7 +43,6 @@ const Home = () => {
   ];
   return (
     <div>
-      <News />
       <MainContent content={content} />
       <Birthdays />
       <Media />
