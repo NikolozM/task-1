@@ -3,7 +3,9 @@ import MainContent from '../components/Main/MainContent';
 import Birthdays from '../components/Main/Birthdays';
 import Media from '../components/Main/Media';
 import News from '../components/Main/News';
+import Chart from '../components/Main/Chart';
 import UsefulInfo from '../components/Main/UsefulInfo';
+import { Grid } from '@mui/material';
 
 import { useTranslation } from 'react-i18next';
 
@@ -42,9 +44,23 @@ const Home = () => {
     },
   ];
   return (
-    <div>
-      <MainContent content={content} />
-      <Birthdays />
+    <div style={{ padding: '20px 50px' }}>
+      <Grid
+        container
+        direction='row'
+        justifyContent='center'
+      >
+        <Grid item xs={1.5}>
+          <News />
+          <Chart />
+        </Grid>
+        <Grid item xs={9}>
+          <MainContent content={content} />
+        </Grid>
+        <Grid item xs={1.5}>
+          <Birthdays />
+        </Grid>
+      </Grid>
       <Media />
       <UsefulInfo />
     </div>

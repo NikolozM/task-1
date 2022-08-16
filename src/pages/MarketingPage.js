@@ -1,11 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const MarketingPage = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default MarketingPage
+export default MarketingPage;

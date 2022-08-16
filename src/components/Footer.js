@@ -14,8 +14,16 @@ const Footer = () => {
       py={{ xs: 5, sm: 10 }}
       bgcolor='#333333'
     >
-      <Container maxWidth='lg'>
-        <Grid container spacing={{ xs: 10, sm: 30 }}>
+      <Container>
+        <Grid
+          container
+          sx={{
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'flex-start',
+            justifyContent: 'flex-start',
+          }}
+        >
           <Grid item xs={12} sm={4}>
             <Box mb='30px' color='#fff' fontSize='18px'>
               დამატებითი ბმულები

@@ -17,10 +17,15 @@
   "our_service": "Our Service",
   "car_reservation": "Car Reservation",
 
-  "employees_page":"Employees Page",
+  "employees_page": "Employees Page",
   "my_page": "My Page",
-  "marketing":"Marketing",
-  "environmental_management":"Environmental Management",
-  "trainings_and_development":"Trainings And Development",
-  "employees_contact":"Employees Contact"
+  "marketing": "Marketing",
+  "environmental_management": "Environmental Management",
+  "trainings_and_development": "Trainings And Development",
+  "employees_contact": "Employees Contact",
+
+  "management_text": "Alex Matua - Member of the Management Board / General Director. Mr. Matua was appointed as a General Director in March, 2019 and is currently in charge of Medium Business Development, Documentary Operations and Business Support, Finance, IT, Procurement, Environmental Management and Legal Departments. He joined ProCredit Bank in 2003. Prior to his appointment Mr. Matua was a Member of Extended Management, Head of Business Clients Department, Branch Support Manager, Regional Manager, the Head of Retail Credit Department, Micro Loans Coordinator, Credit Manager, the Head of LO Group, Loan Officer. Mr. Matua graduated from the ProCredit Regional Academy (North Macedonia) in 2009 and the ProCredit Management Academy (Fürth, Germany) in 2013.",
+  "our_values_text": "Corporate values of PCH are the driving force and guiding principles in day-to-day work of our employees. These fundamental universal values, views and attitudes towards oneself and others are extremely important for our corporate identity.They are basis of our mission, business strategy and the way we do banking. Our Corporate Values: Transparency: We provide transparent information to our customers, to the general public and to our employees. For example, we ensure that customers fully understand the terms of the contracts they conclude with us, and we engage in financial education in order to raise public awareness of the dangers of in transparent financial offer A culture of open communication: We are open, fair and constructive in our communication with each other, and deal with conflicts at work in a professional manner, working together to find solution Social responsibility and tolerance: We offer our clients sound, well founded advice. Before offering loans to our clients, we assess their economic and financial situation, their business potential and their repayment capacity. On this basis we help them to choose appropriate loan options from which they can genuinely benefit and to avoid becoming over indebted. Promoting a savings culture is another important part of our mission, as we believe that private savings play an especially crucial role in societies with relatively low levels of publicly funded social welfare provision. And we are committed to treating all customers and employees with fairness and respect, regardless of their origin, colour, language, gender or religious or political belief Service orientation: Every client is served in a friendly, competent and courteous manner. Our employees are committed to providing excellent service to all customers, regardless of their background or the size of their busines High professional standards: Our employees take personal responsibility for the quality of their work and always strive to grow as professional A high degree of personal integrity and commitment: Complete honesty is required of all employees in the ProCredit group at all times, and any breaches of this principle are dealt with swiftly and rigor ",
+  "our_habit_code_text": "Standards of conduct are determined by the ProCredit Bank Code of Conduct, which is legaly binding document and is the same for all banks of ProCredit Group:",
+  "our_dress_code_text": "Please see Georgian version"
 }

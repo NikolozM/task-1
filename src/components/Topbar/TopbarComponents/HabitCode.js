@@ -1,14 +1,11 @@
 import React from 'react';
 import { Typography } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 const HabitCode = () => {
+  const { t } = useTranslation();
   return (
     <div>
-      <Typography>
-        ჩვენი ქცევის ნორმებს განსაზღვრავს პროკრედიტ ბანკის
-        ქცევის კოდექსი, რომელიც საერთოა პროკრედიტ ჯგუფშ
-        შემავალი ყველა ბანკისთვის და რომლის შესრულებაც
-        სავალდებულოა ყველა თანამშრომლისთვის:
-      </Typography>
+      <Typography>{t('our_habit_code_text')}</Typography>
 
       <a
         style={{ textDecoration: 'none', color: 'green' }}

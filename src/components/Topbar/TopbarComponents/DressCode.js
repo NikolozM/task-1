@@ -1,14 +1,26 @@
-import React from 'react'
+import React from 'react';
 import {
   Stack,
   Typography,
   TextField,
   Box,
 } from '@mui/material';
+import { useTranslation } from 'react-i18next';
 const DressCode = () => {
-  return (
-    <div>DressCode</div>
-  )
-}
+  const { t } = useTranslation();
 
-export default DressCode
+  return (
+    <div>
+      <Typography>{t('our_dress_code_text')}</Typography>
+
+      <a
+        style={{ textDecoration: 'none', color: 'green' }}
+        href='https://intranet.procreditbank.ge/intranet_new/admin/files/CoC_web_202006.pdf'
+      >
+        ჩაცმის კოდექსი
+      </a>
+    </div>
+  );
+};
+
+export default DressCode;

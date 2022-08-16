@@ -27,6 +27,11 @@
   width:100%;
 }
 
+.scrollBar {
+  max-height: 800px;
+  overflow: auto;
+}
+
 ul {
   list-style: none;
   width: 100%;

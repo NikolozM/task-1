@@ -11,13 +11,14 @@ import MyPage from './pages/MyPage';
 import MarketingPage from './pages/MarketingPage';
 import TrainingsAndDevelopmentPage from './pages/TrainingsAndDevelopmentPage';
 import EnvironmentalManagementPage from './pages/EnvironmentalManagementPage';
-import Chart from './components/Chart';
+import ChartPage from './pages/ChartPage';
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 import HttpApi from 'i18next-http-backend';
 import { topBarRoutes } from './routes/topBarRoute';
-import News from './components/Main/News'
+import News from './components/Main/News';
+import NewsPage from './pages/NewsPage';
 
 i18n
   .use(initReactI18next)
@@ -74,6 +75,7 @@ const App = () => {
           path='/Employees-Contact'
           element={<EmployeesContactPage />}
         />
+        <Route path='/News-Page' element={<NewsPage />} />
         <Route
           path='/Employees'
           element={<EmployeesPage />}
@@ -91,15 +93,8 @@ const App = () => {
           path='/Environmental-Management'
           element={<EnvironmentalManagementPage />}
         />
-        <Route
-          path='/Currency'
-          element={<Chart />}
-        />
-        <Route
-          path='/News'
-          element={<News />}
-        />
-        
+        <Route path='/Currency' element={<ChartPage />} />
+        <Route path='/News' element={<News />} />
       </Routes>
       <div style={{ marginTop: 'auto' }}>
         <Footer />

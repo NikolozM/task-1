@@ -7,7 +7,7 @@ const MainContent = ({ content }) => {
     <Grid
       container
       direction='row'
-      padding='100px'
+      padding='20px'
       justifyContent='center'
     >
       {content.map((item) => {
@@ -15,19 +15,19 @@ const MainContent = ({ content }) => {
           <Grid
             key={item.id}
             item
-            xl={4}
+            xl={3}
             md={6}
             sm={8}
             xs={12}
             m={{
-              xl: '10px 30px 80px 30px',
-              md: '10px 30px 80px 30px',
-              sm: '10px 0px 50px 0px',
-              xs: '10px 0px 30px 0px',
+              xl: '0px 20px 100px 20px',
+              md: '0px 20px 100px 20px',
+              sm: '0px 0px 50px 0px',
+              xs: '0px 0px 30px 0px',
             }}
             sx={{
               '&:hover': {
-                boxShadow: '1px 1px 1px rgb(212, 241, 215)',
+                boxShadow: '1px 1px 2px 2px #a0a8a1',
                 transform: 'scale(1.02)',
                 borderRadius: '10px',
                 transition: '0.5s',
@@ -48,7 +48,7 @@ const MainContent = ({ content }) => {
                 style={{
                   width: '100%',
                   height: '100%',
-                  objectFit: 'contain',
+                  objectFit: 'cover',
                 }}
                 src={item.img}
                 alt=''

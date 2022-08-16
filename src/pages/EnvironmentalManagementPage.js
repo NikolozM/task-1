@@ -1,10 +1,7 @@
-import React from 'react'
+import React from 'react';
 
 const EnvironmentalManagementPage = () => {
-  return (
-    <div>
-    </div>
-  )
-}
+  return <div></div>;
+};
 
-export default EnvironmentalManagementPage
+export default EnvironmentalManagementPage;

@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Line } from 'react-chartjs-2';
-import { usdRates, eurRates } from './currencyData';
+import {
+  usdRates,
+  eurRates,
+} from '../components/currencyData';
 import { Chart as ChartJS } from 'chart.js/auto';
 import { DataGrid } from '@mui/x-data-grid';
 
