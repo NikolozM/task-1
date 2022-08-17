@@ -15,7 +15,6 @@ const LanguageChanger = () => {
     setLanguage(
       JSON.parse(localStorage.getItem('language'))
     );
-    console.log(language);
   }, []);
 
   useEffect(() => {
@@ -23,7 +22,6 @@ const LanguageChanger = () => {
       'language',
       JSON.stringify(language)
     );
-    console.log(language);
   }, [language]);
 
   return (

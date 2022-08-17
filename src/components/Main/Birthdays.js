@@ -1,8 +1,11 @@
-import * as React from 'react';
-import { birthdays } from '../../routes/birthdays.js';
+import React, { useEffect } from 'react';
 import { ScrollMenu } from 'react-horizontal-scrolling-menu';
 import { Link } from 'react-router-dom';
 import { Stack, Typography } from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
+import { getBirthdays } from '../../redux/ducks/birthdays';
+import dog from '../../assets/dog.png';
+
 let newDate = new Date();
 let date = newDate.getDate();
 let month = newDate.getMonth() + 1;
@@ -15,9 +18,17 @@ let currentDate = `${
   month < 10 ? `${date}` : `${date}`
 }${separator}${year}`;
 
-console.log(currentDate);
-
 const Birthdays = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getBirthdays());
+  }, [dispatch]);
+
+  const birthdays = useSelector(
+    (state) => state.birthdays.birthdays
+  );
+
   return (
     <Stack direction='column'>
       <Typography
@@ -33,6 +44,7 @@ const Birthdays = () => {
         if (person.birthday === currentDate) {
           return (
             <div
+              key={person.id}
               style={{
                 borderBottom: '1px solid black',
                 paddingBottom: '10px',
@@ -40,7 +52,7 @@ const Birthdays = () => {
               }}
             >
               <img
-                src={person.img}
+                src={dog}
                 alt=''
                 style={{
                   width: '80%',
