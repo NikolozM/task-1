@@ -4,7 +4,6 @@
   flex-direction: column;
 }
 
-
 .container {
   width: 100%;
   border-top: 1px solid #95a5a6;
@@ -13,18 +12,18 @@
   border-bottom: 1px solid #95a5a6;
 }
 
-.large-top-bar-list-items{
+.large-top-bar-list-items {
   display: flex;
   flex-direction: row;
 }
 
-.small-top-bar-list-items{
+.small-top-bar-list-items {
   position: absolute;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  top:10%;
-  left:1%;
-  width:100%;
+  top: 10%;
+  left: 1%;
+  width: 100%;
 }
 
 .scrollBar {
@@ -82,8 +81,27 @@ li:nth-child(6) {
   }
 }
 
+@keyframes slide {
+  0% {
+    transition-duration: 1s ease;
+    opacity: 0;
+  }
+  50% {
+    transition-duration: 1s ease;
+    opacity: 0.5;
+  }
+  100% {
+    transition-duration: 2s ease;
+    opacity: 1;
+  }
+}
+
 .roll-out {
   animation: 1.5s rollout;
+}
+
+.slide {
+  animation: 3s slide;
 }
 
 .dropDown {
@@ -92,3 +110,18 @@ li:nth-child(6) {
   width: 150px;
   display: flex;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

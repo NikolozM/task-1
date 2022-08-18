@@ -20,6 +20,7 @@ import { topBarRoutes } from './routes/topBarRoute';
 import News from './components/Main/News';
 import NewsPage from './pages/NewsPage';
 
+import Survey from './components/Main/Survey';
 i18n
   .use(initReactI18next)
   .use(LanguageDetector)
@@ -75,7 +76,10 @@ const App = () => {
           path='/Employees-Contact'
           element={<EmployeesContactPage />}
         />
-        <Route path='/News-Page' element={<NewsPage />} />
+        <Route
+          path='/News-Page/:id'
+          element={<NewsPage />}
+        />
         <Route
           path='/Employees'
           element={<EmployeesPage />}
@@ -96,6 +100,7 @@ const App = () => {
         <Route path='/Currency' element={<ChartPage />} />
         <Route path='/News' element={<News />} />
       </Routes>
+      <Survey />
       <div style={{ marginTop: 'auto' }}>
         <Footer />
       </div>

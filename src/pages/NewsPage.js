@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
+import { useParams, Link } from 'react-router-dom';
 import { news } from '.././routes/news';
 import { Grid, Typography } from '@mui/material';
+
 const NewsPage = () => {
+  const { id } = useParams();
   return (
     <Grid
       container
@@ -18,31 +21,41 @@ const NewsPage = () => {
           paddingRight: '50px',
         }}
       >
-        <Typography>{news[0].date}</Typography>
-        <Typography
-          fontSize='67px'
-          fontWeight='500'
-          height='auto'
-        >
-          {news[0].title}
-        </Typography>
-        <img
-          src={news[0].img}
-          alt=''
-          style={{
-            width: '100%',
-            height: '320px',
-            objectFit: 'cover',
-          }}
-        ></img>
-        <Typography
-          fontSize='19px'
-          m='30px 55px'
-          lineHeight='30px'
-          letterSpacing='2px'
-        >
-          {news[0].text}
-        </Typography>
+        {news.map((item) => {
+          if (item.id.toString() === id.toString()) {
+            return (
+              <div>
+                <Typography>{item.date}</Typography>
+                <Typography
+                  fontSize='67px'
+                  fontWeight='500'
+                  height='auto'
+                >
+                  {item.title}
+                </Typography>
+                <img
+                  src={item.img}
+                  alt=''
+                  style={{
+                    width: '100%',
+                    height: '320px',
+                    objectFit: 'cover',
+                  }}
+                ></img>
+                <Typography
+                  fontSize='19px'
+                  m='30px 55px'
+                  lineHeight='30px'
+                  letterSpacing='2px'
+                >
+                  {item.text}
+                </Typography>
+              </div>
+            );
+          } else {
+            return null;
+          }
+        })}
       </Grid>
       <Grid item xs={4}>
         <div
@@ -59,42 +72,55 @@ const NewsPage = () => {
             უახლესი სტატიები
           </Typography>
           {news.map((item) => {
-            return (
-              <div
-                style={{
-                  borderBottom: '2px solid black',
-                  marginBottom: '20px',
-                  paddingBottom: '30px',
-                }}
-              >
-                <img
-                  src={item.img}
-                  alt=''
+            if (item.id.toString() !== id.toString()) {
+              console.log(item.id);
+              console.log(id);
+              return (
+                <div
+                  key={item.id}
                   style={{
-                    width: '100px',
-                    borderRadius: '50%',
+                    borderBottom: '2px solid black',
+                    marginBottom: '20px',
+                    paddingBottom: '30px',
                   }}
-                ></img>
-                <Typography fontWeight='500'>
-                  {item.date}
-                </Typography>
-                <Typography
-                  fontSize='24px'
-                  fontWeight='600'
                 >
-                  {item.title}
-                </Typography>
-                <Typography pb='10px'>
-                  {item.text.substring(0, 100)}...
-                </Typography>
-                <Typography
-                  fontWeight='600'
-                  sx={{ cursor: 'pointer' }}
-                >
-                  წაიკითხე სრულად
-                </Typography>
-              </div>
-            );
+                  <img
+                    src={item.img}
+                    alt=''
+                    style={{
+                      width: '100px',
+                      borderRadius: '50%',
+                    }}
+                  ></img>
+                  <Typography fontWeight='500'>
+                    {item.date}
+                  </Typography>
+                  <Typography
+                    fontSize='24px'
+                    fontWeight='600'
+                  >
+                    {item.title}
+                  </Typography>
+                  <Typography pb='10px'>
+                    {item.text.substring(0, 100)}...
+                  </Typography>
+
+                  <Link
+                    style={{
+                      textDecoration: 'none',
+                      fontSize: '12px',
+                      marginTop: '10px',
+                      fontWeight: '600',
+                      color: 'black',
+                    }}
+                    to={`/News-Page/${item.id}`}
+                    fontSize='12px'
+                  >
+                    წაიკითხე სრულად
+                  </Link>
+                </div>
+              );
+            }
           })}
         </div>
       </Grid>
