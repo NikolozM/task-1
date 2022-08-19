@@ -19,8 +19,6 @@ import HttpApi from 'i18next-http-backend';
 import { topBarRoutes } from './routes/topBarRoute';
 import News from './components/Main/News';
 import NewsPage from './pages/NewsPage';
-
-import Survey from './components/Main/Survey';
 i18n
   .use(initReactI18next)
   .use(LanguageDetector)
@@ -100,7 +98,6 @@ const App = () => {
         <Route path='/Currency' element={<ChartPage />} />
         <Route path='/News' element={<News />} />
       </Routes>
-      <Survey />
       <div style={{ marginTop: 'auto' }}>
         <Footer />
       </div>

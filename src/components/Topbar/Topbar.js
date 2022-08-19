@@ -79,15 +79,17 @@ const Navbar = () => {
           <LanguageChanger />
         </Stack>
       </Stack>
+
+
       <div className='container'>
-        <ul>
+        <div className='bar-color'>
           <li></li>
           <li></li>
           <li></li>
           <li></li>
           <li></li>
           <li></li>
-        </ul>
+        </div>
       </div>
     </div>
   );

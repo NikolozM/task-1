@@ -6,7 +6,7 @@ import News from '../components/Main/News';
 import Chart from '../components/Main/Chart';
 import UsefulInfo from '../components/Main/UsefulInfo';
 import { Grid } from '@mui/material';
-
+import Survey from '../components/Main/Survey';
 import { useTranslation } from 'react-i18next';
 
 const Home = () => {
@@ -59,6 +59,7 @@ const Home = () => {
         </Grid>
         <Grid item xs={1.5}>
           <Birthdays />
+          <Survey />
         </Grid>
       </Grid>
       <Media />

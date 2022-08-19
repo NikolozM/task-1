@@ -4,14 +4,6 @@
   flex-direction: column;
 }
 
-.container {
-  width: 100%;
-  border-top: 1px solid #95a5a6;
-  border-left: 1px solid #95a5a6;
-  border-right: 1px solid #95a5a6;
-  border-bottom: 1px solid #95a5a6;
-}
-
 .large-top-bar-list-items {
   display: flex;
   flex-direction: row;
@@ -31,7 +23,15 @@
   overflow: auto;
 }
 
-ul {
+.container {
+  width: 100%;
+  border-top: 1px solid #95a5a6;
+  border-left: 1px solid #95a5a6;
+  border-right: 1px solid #95a5a6;
+  border-bottom: 1px solid #95a5a6;
+}
+
+.bar-color {
   list-style: none;
   width: 100%;
   font-size: 0;
@@ -39,36 +39,36 @@ ul {
   margin: 0;
 }
 
-li {
+.bar-color > li {
   display: inline-block;
   width: 16.66666%;
   height: 2px;
 }
 
-li:nth-child(1) {
+.bar-color > li:nth-child(1) {
   background: #ffec00;
 }
 
-li:nth-child(2) {
+.bar-color > li:nth-child(2) {
   background: #ff7322;
 }
 
-li:nth-child(3) {
+.bar-color > li:nth-child(3) {
   background: #d42427;
 }
 
-li:nth-child(4) {
+.bar-color > li:nth-child(4) {
   background: teal;
 }
 
-li:nth-child(5) {
+.bar-color > li:nth-child(5) {
   background: #a82682;
 }
-li:nth-child(6) {
+.bar-color > li:nth-child(6) {
   background: #0060aa;
 }
 
-li:nth-child(6) {
+.bar-color > li:nth-child(6) {
   background: rgb(10, 49, 80);
 }
 
@@ -104,24 +104,7 @@ li:nth-child(6) {
   animation: 3s slide;
 }
 
-.dropDown {
-  position: absolute;
-  background-color: #e41010;
-  width: 150px;
-  display: flex;
+.progressbar {
+  background: #058d22;
+  border-radius: 1.2em;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
