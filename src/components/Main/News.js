@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { news } from '../../routes/news.js';
 import { Link } from 'react-router-dom';
 import { Typography } from '@mui/material';
-
+import { useTranslation } from 'react-i18next';
 const News = () => {
   const [num, setNum] = useState(0);
   const index = num;
-
+  const { t } = useTranslation();
   useEffect(() => {
     if (num < news.length - 1) {
       setTimeout(() => setNum(num + 1), 8000);
@@ -30,7 +30,7 @@ const News = () => {
         pb='10px'
         sx={{ borderBottom: '1px solid black' }}
       >
-        სტატიები
+        {t('articles')}
       </Typography>
       <div key={news[index].id} className='slide'>
         <img

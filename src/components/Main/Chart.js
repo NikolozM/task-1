@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import { Typography } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 const Chart = () => {
+  const { t } = useTranslation();
+
   return (
     <div
       style={{
@@ -15,13 +18,16 @@ const Chart = () => {
         padding: '20px',
       }}
     >
-      <Typography m='0px auto' fontSize='12px'>
-        ოფიციალური USD,EUR კურსები
+      <Typography fontSize='15px' m='0 auto'>
+        USD,EUR
       </Typography>
-      <Typography m='30px auto 15px auto' fontSize='12px'>
-        EUR - 2.7877
+      <Typography  fontSize='13px' mb='10px'>
+        {t('exchange_rates')}
       </Typography>
-      <Typography m='0px auto' fontSize='12px'>
+      <Typography fontSize='12px'>
+        USD - 2.7877
+      </Typography>
+      <Typography fontSize='12px'>
         EUR - 2.8426
       </Typography>
       <Link
@@ -35,7 +41,7 @@ const Chart = () => {
         m='0px auto'
         fontSize='12px'
       >
-        იხილეთ ისტორია
+        {t('view_all')}
       </Link>
     </div>
   );

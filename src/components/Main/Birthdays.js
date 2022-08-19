@@ -5,7 +5,7 @@ import { Stack, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { getBirthdays } from '../../redux/ducks/birthdays';
 import dog from '../../assets/dog.png';
-
+import { useTranslation } from 'react-i18next';
 let newDate = new Date();
 let date = newDate.getDate();
 let month = newDate.getMonth() + 1;
@@ -20,7 +20,7 @@ let currentDate = `${
 
 const Birthdays = () => {
   const dispatch = useDispatch();
-
+  const { t } = useTranslation();
   useEffect(() => {
     dispatch(getBirthdays());
   }, [dispatch]);
@@ -38,7 +38,7 @@ const Birthdays = () => {
         pb='10px'
         sx={{ borderBottom: '1px solid black' }}
       >
-        დაბადების დღეები
+        {t('birthdays')}
       </Typography>
       {birthdays.map((person) => {
         if (person.birthday === currentDate) {
@@ -52,7 +52,7 @@ const Birthdays = () => {
               }}
             >
               <img
-                src={dog}
+                src='https://images.pexels.com/photos/802112/pexels-photo-802112.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
                 alt=''
                 style={{
                   width: '80%',
