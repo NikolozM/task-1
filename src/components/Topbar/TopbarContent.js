@@ -73,7 +73,7 @@ export default function NavElements(props) {
     setExpanded(panel);
   };
   return (
-    <Stack direction='row' gap='20px' alignItems='center'>
+    <Stack direction='row' width='50%' gap='20px' alignItems='center'>
       <Link to='/' style={{ textDecoration: 'none' }}>
         <Typography
           fontWeight={600}
